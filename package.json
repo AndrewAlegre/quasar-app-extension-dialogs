@@ -1,6 +1,6 @@
 {
   "name": "@andrewa813/quasar-app-extension-dialogs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Opinionated dialog callout system from script for Quasar.",
   "author": "Andrew Alegre <andrew.alegre@collave.com>",
   "license": "MIT",
