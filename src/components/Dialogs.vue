@@ -17,6 +17,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      components: {}
+    }
+  },
   computed: {
     dialogs () {
       return this.$store.state['dialogs'].list
@@ -24,7 +29,10 @@ export default {
   },
   methods: {
     getComponentFromName (name) {
-      return () => import(`src/dialogs/${name}`)
+      if (!this.components[name]) {
+        this.components[name] = () => import(`src/dialogs/${name}`)
+      }
+      return this.components[name]
     },
     hideDialog (index) {
       this.$refs.dialogs[index].hide()
